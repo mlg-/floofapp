@@ -1,11 +1,32 @@
-<h1>Here's my cool blarg and all my articles</h1>
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <h1 class="display-1 fs-2"><i class="bi bi-blockquote-left"></i> Here's my cool blarg and all my articles</h1>
+    </a>
 
-<ul>
-  <% @articles.each do |article| %>
-  <li>
-    <h2> <%= article.title %> </h2>
-    <h3> published at: <%= article.pretty_created_at %>
-    <p> <%= article.body %> </p>
-  </li>
-  <% end %>
-</ul>
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+    </ul>
+  </header>
+</div>
+<div class="container">
+  <ul class="list-group">
+    <% @articles.each do |article| %>
+    <li class="list-group-item card text-bg-light">
+      <h2 class="card-header">
+        <i class="bi bi-newspaper"></i>
+        <%= article.title %>
+      </h2>
+      <div class="card-body">
+        <span class="display-8"><%= article.pretty_created_at %></span>
+        <p class="lead">
+          <%= article.body %>
+        </p>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+
+

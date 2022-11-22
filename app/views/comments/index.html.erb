@@ -1,0 +1,10 @@
+<h1>Recent comments!</h1>
+<ul>
+  <% @comments.each do |comment| %>
+  <li>
+    <p> <%= comment.body %> </h2>
+    <p> from: <%= comment.author %>
+    <p> posted: <%= comment.created_at %> </p>
+  </li>
+  <% end %>
+</ul>

@@ -5,5 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-    Article.create(title: 'This is an anxietycore news headline, get scared', body: 'nihilist despair')
-    Article.create(title: 'This is a post about how cute dogs are', body: 'spoiler: really darn cute')
+    first_article = Article.create(title: 'This is an anxietycore news headline, get scared', body: 'nihilist despair')
+    second_article = Article.create(title: 'This is a post about how cute dogs are', body: 'spoiler: really darn cute')
+
+    Comment.create(body: 'yeah, I am pretty nervous, thanks for your help with that', author: 'MLG', article: first_article)
+    Comment.create(body: 'YOLO!!!', author: 'NMG', article: first_article)
+    Comment.create(body: 'wow this is aggressive, thanks i hate it', author: 'Allison Berry Esq', article: first_article)
+    Comment.create(body: 'really very cute', author: 'Dory', article: second_article)

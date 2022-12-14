@@ -1,0 +1,16 @@
+<div class="container py-3">
+  <h1 class="display-1">Write a new article!</h1>
+  <%= form_with model: @article do |form| %>
+    <div class="form-group">
+      <%= form.label 'Title' %>
+      <%= form.text_field :title, class: 'form-control m-2' %>
+
+      <%= form.label 'Body' %>
+      <%= form.text_area :body, size: "60x10", class: 'form-control m-2' %>
+
+      <%= form.label 'Author' %>
+      <%= form.select :user_id, @users, class: 'form-control m-2' %><br/>
+      <%= form.submit 'Publish', class: 'btn btn-primary m-2' %>
+    </div>
+  <% end %>
+</div>

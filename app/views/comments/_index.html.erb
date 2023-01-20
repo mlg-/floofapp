@@ -1,9 +1,9 @@
 <h1>Recent comments!</h1>
 <ul>
-  <% @comments.each do |comment| %>
+  <% comments.each do |comment| %>
   <li>
     <p> <%= comment.body %> </h2>
-    <p> from: <%= comment.author %>
+    <p> from: <%= comment.user.first_name %>
     <p> posted: <%= comment.created_at %> </p>
   </li>
   <% end %>

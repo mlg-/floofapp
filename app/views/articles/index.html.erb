@@ -23,6 +23,7 @@
           <%= article.body %>
         </p>
       </div>
+      <%= render 'comments/index', comments: article.comments %>
     </li>
     <% end %>
   </ul>
